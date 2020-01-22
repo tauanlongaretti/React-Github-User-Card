@@ -1,18 +1,28 @@
 import React from "react";
 import axios from "axios";
 import styled from "styled-components";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
+
+const StyledIcon = styled(FontAwesomeIcon)`
+    color: #dcdde1;
+    font-size: 60px;
+    margin: 10% 0% 10% 7%;;
+`;
 
 const StyledImg = styled.img`
     border-radius: 20px;
     border: #dcdde1 solid 2px;
     width: 250px;
+    height: 275px;
+    margin-left: 10%;
 `;
 
 const StyledDiv = styled.div`
     display: flex;
     justify-content: center;
-    flex-direction: row;
     align-items: center;
+    flex-direction: row;
     margin: 5% 12%;
     padding: 3%;
     background-color: #40739e;
@@ -57,6 +67,7 @@ class MyCard extends React.Component {
                     <p>ID: {this.state.user.id}</p>
                     <p>Repos: {this.state.user.public_repos}</p>
                 </InfoDiv>
+                    <StyledIcon icon={faGithub} />
             </StyledDiv>
         )
     }

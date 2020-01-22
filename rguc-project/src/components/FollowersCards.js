@@ -27,14 +27,14 @@ class FollowersCards extends React.Component {
     }
 
     render() {
-        return (
+        return (            
             <StyledDiv>
                 {this.state.users.map(card => (
                 <Followers
-                  key={card.id} 
-                  login={card.login}
-                  avatar_url={card.avatar_url}
-                  id={card.id}
+                    key={card.id} 
+                    login={card.login}
+                    avatar_url={card.avatar_url}
+                    id={card.id}
                 />
                 ))}
             </StyledDiv>
